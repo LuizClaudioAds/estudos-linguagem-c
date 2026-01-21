@@ -2,6 +2,8 @@
 
 int main() {
 
+    char colunas[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+
     /* Inicialização do tabuleiro 10x10*/
     int tabuleiro[10][10] = {0}; // 0 representa água
     
@@ -60,12 +62,18 @@ int main() {
     // Visualização do tabuleiro após a colocação dos navios
     if(valido) {
         printf("\nTabuleiro com Navios:\n");
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
-            printf("%d ", tabuleiro[i][j]);
+        for (int i = 0; i < 10; i++) {
+            if (i == 0) printf("\n\t");
+            printf("%c ", colunas[i]);
         }
-        printf("\n");
-    }
+        printf("\n\n");
+        for (int i = 0; i < 10; i++) {
+            printf("%d\t", i + 1);
+            for (int j = 0; j < 10; j++) {
+                printf("%d ", tabuleiro[i][j]);
+            }
+            printf("\n");
+        }
     } else {
         printf("Não foi possível posicionar os navios devido a erros.\n");
     }

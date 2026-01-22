@@ -14,7 +14,7 @@ int main() {
     /* Coordenadas iniciais dos navios */
     int linha_h = 2, coluna_h = 3;  // navio horizontal
     int linha_v = 6, coluna_v = 5;  // navio vertical
-
+    
     int valido = 1; // Flag para verificar se a posição é válida
 
     /* Verifica se o navio horizontal está dentro dos limites */
